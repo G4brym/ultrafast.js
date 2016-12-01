@@ -1,0 +1,86 @@
+.index-loading {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.alertify-logs.bottom,
+.alertify-logs:not(.top) {
+    bottom: 67px !important;
+}
+
+.alertify-logs.right {
+    right: calc(50% - 609px) !important;
+}
+
+.clear-styles {
+    all: unset !important;
+}
+
+.has-errors input {
+    border-color: #dd4b39;
+    box-shadow: none;
+}
+.has-errors i {
+    color: #dd4b39 !important;
+}
+.clickable {
+    cursor: pointer;
+}
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-post-box > .box-body {
+    padding: 0;
+}
+
+.new-post-box > .box-footer {
+    padding: 5px;
+}
+
+.new-post-box > .box-footer > button {
+    width: auto;
+    margin: 0;
+}
+
+.new-post-box > .box-body > div {
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding: 10px;
+}
+
+.new-post-box > .box-body > div:empty:before {
+  content:attr(data-placeholder);
+  color:gray
+}
+
+.btn[pressed=true] {
+  background-color: #e7e7e7;
+}
+
+.finish_register_fix {
+    width: 325px;
+    margin: 0 7.5px 15px 7.5px;
+}
+.clear {
+    clear: left;
+    display: block;
+}
+.user-badge{
+    float:left;
+}
+.user-badge :hover > #black{
+    visibility:visible;
+}
+.user-badge-follow {
+    visibility:hidden;
+    height: 218.6px;
+    width: 325px;
+    margin: -234px 7px 15px 7px;
+    position: absolute;
+    background: black;
+}

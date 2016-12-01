@@ -1,0 +1,59 @@
+  {{#isTrue isAuth}}
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="col-lg-8 col-md-8  col-xs-12" style="float:unset;">
+          <div id="new-post-box" class="box box-widget new-post-box">
+            <div class="box-header with-border">
+              <div class="user-block">
+                <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
+                <span class="description">Shared publicly - Everyone will be able to see this post</span>
+              </div>
+              <!-- /.user-block -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div id="newPost-text" contenteditable data-placeholder="What is happening?"></div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <button id="newPost-addImg" type="button" class="btn btn-block btn-default btn-sm pull-left"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+              <button id="newPost-submit" type="button" class="btn btn-block btn-success btn-sm pull-right">Post</button>
+            </div>
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+
+
+          <div id="posts">
+
+          </div>
+
+
+
+        </div>
+
+    </section>
+    <!-- /.content -->
+  {{else}}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Page Header
+        <small>Optional description</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <h3 style="text-align: center;">register or login to get awesome content!</h3>
+
+    </section>
+    <!-- /.content -->
+  {{/isTrue}}

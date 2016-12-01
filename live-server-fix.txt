@@ -1,0 +1,20 @@
+function file(filepath, stat) {
+	if(filepath == "/root/workspace/ImperiGame_01/fe/public/index.html"){
+		var x = path.extname(filepath).toLocaleLowerCase(),
+				possibleExtensions = [ "", ".html", ".htm", ".xhtml", ".php", ".svg" ];
+		if (hasNoOrigin && (possibleExtensions.indexOf(x) > -1)) {
+			// TODO: Sync file read here is not nice, but we need to determine if the html should be injected or not
+			var contents = fs.readFileSync(filepath, "utf8");
+			for (var i = 0; i < injectCandidates.length; ++i) {
+				if (contents.indexOf(injectCandidates[i]) > -1) {
+					injectTag = injectCandidates[i];
+					break;
+				}
+			}
+			if (injectTag === null && LiveServer.logLevel >= 2) {
+				console.warn("Failed to inject refresh script!".yellow,
+					"Couldn't find any of the tags ", injectCandidates, "from", filepath);
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+      <!-- Sidebar Menu -->
+        {{#isTrue isAuth}}
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>Alexander Pierce</p>
+              <!-- Status -->
+              <a class="clickable"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+
+          <!-- search form (Optional) -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+                  <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                    </button>
+                  </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+
+          <ul class="sidebar-menu">
+            <li class="header">HEADER</li>
+            {{#each links}}
+              <li><a href="{{ link }}"><i class="fa fa-link"></i> <span>{{ name }}</span></a></li>
+            {{/each}}
+            <li class="treeview">
+              <a class="clickable"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="/">Link in level 2</a></li>
+                <li><a href="/">Link in level 2</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        {{else}}
+
+          <div class="sidebar-form sidebar-form-fix">
+            <h3 class="sidebar-title">Login to Proceed</h3>
+            <div class="btn-group full-width">
+              <a href="/login/" class="btn btn-default sidebar-login">Login</a>
+              <a href="/register/" class="btn btn-default sidebar-register">Registar</a>
+            </div>
+          </div>
+        {{/isTrue}}
+
+      <!-- /.sidebar-menu -->

@@ -1,0 +1,76 @@
+<div class="post-hidden" style="display: none;">
+  {{#each posts}}
+    <div id="post-{{ id }}" post-id="{{ id }}" class="box box-widget">
+      <div class="box-header with-border">
+        <div class="user-block">
+          <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+          <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
+          <span class="description">Shared publicly - 7:30 PM Today</span>
+        </div>
+        <!-- /.user-block -->
+        <div class="box-tools">
+          <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown" data-widget="options"><i class="fa fa-caret-down"></i></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" href="#">Report</a></li>
+          </ul>
+        </div>
+        <!-- /.box-tools -->
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <img class="img-responsive pad img-center" src="http://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" alt="Photo">
+
+        <p>{{ text }}</p>
+        <button id="awesomePost" pressed="{{#isTrue has_awesome}}true{{else}}false{{/isTrue}}" type="button" class="btn btn-default btn-xs"><i class="fa fa-hand-rock-o"></i> Awesome</button>
+        <button id="commentButton" type="button" class="btn btn-default btn-xs" title="" data-original-title="" data-container="body" data-toggle="popover" data-placement="top" data-content="Coming soon."><i class="fa fa-comments-o"></i> Comment</button>
+        <button id="repostButton" type="button" class="btn btn-default btn-xs" title="" data-original-title="" data-container="body" data-toggle="popover" data-placement="top" data-content="Coming soon."><i class="fa fa-retweet"></i> Repost</button>
+        <span class="pull-right text-muted"><aa id="awesomes-counter">{{ n_awesomes }}</aa> Awesomes - <aa id="comments-counter">{{ n_comments }}</aa> comments</span>
+      </div>
+      <!-- /.box-body -->
+      <div id="comments" class="box-footer box-comments" style="display: none;">
+        <div class="box-comment">
+          <!-- User image -->
+          <img class="img-circle img-sm" src="../dist/img/user3-128x128.jpg" alt="User Image">
+
+          <div class="comment-text">
+                <span class="username">
+                  Maria Gonzales
+                  <span class="text-muted pull-right">8:03 PM Today</span>
+                </span><!-- /.username -->
+            It is a long established fact that a reader will be distracted
+            by the readable content of a page when looking at its layout.
+          </div>
+          <!-- /.comment-text -->
+        </div>
+        <!-- /.box-comment -->
+        <div class="box-comment">
+          <!-- User image -->
+          <img class="img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="User Image">
+
+          <div class="comment-text">
+                <span class="username">
+                  Luna Stark
+                  <span class="text-muted pull-right">8:03 PM Today</span>
+                </span><!-- /.username -->
+            It is a long established fact that a reader will be distracted
+            by the readable content of a page when looking at its layout.
+          </div>
+          <!-- /.comment-text -->
+        </div>
+        <!-- /.box-comment -->
+      </div>
+      <!-- /.box-footer -->
+      <div class="box-footer">
+        <form action="#" method="post">
+          <img class="img-responsive img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text">
+          <!-- .img-push is used to add margin to elements next to floating images -->
+          <div class="img-push">
+            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+          </div>
+        </form>
+      </div>
+      <!-- /.box-footer -->
+    </div>
+    <!-- /.box -->
+  {{/each}}
+</div>
